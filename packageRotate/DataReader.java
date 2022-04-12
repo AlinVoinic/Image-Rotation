@@ -14,7 +14,6 @@ public abstract class DataReader implements Interface{
 	private static String outputName;	//numele fisierului de iesire
 	private static String inputName;	//numele fisierului de intrare
 	
-	// Getter si Setter pentru path
 	public static String getPath() {
 		return path;
 	}
@@ -23,7 +22,6 @@ public abstract class DataReader implements Interface{
 		path = name;
 	}
 	
-	// Getter si Setter pentru outputName
 	public static String getOutputName() {
 		return outputName;
 	}
@@ -32,7 +30,6 @@ public abstract class DataReader implements Interface{
 		outputName = name;
 	}
 	
-	// Getter si Setter pentru inputName
 	public static String getInputName() {
 		return inputName;
 	}
@@ -51,10 +48,10 @@ public abstract class DataReader implements Interface{
 	public static void readData() {
 		System.out.println("---Insert data about image---");
 		
-		Scanner in = new Scanner(System.in);				//declarare obiect de tip scanner
+		Scanner in = new Scanner(System.in);				
 		
 		System.out.println("Insert image path: ");
-		String pathName = in.nextLine();					//citire de la tastatura path fisier
+		String pathName = in.nextLine();				//citire de la tastatura path fisier
 		
 		System.out.println("Insert image name: ");
 		String pictureInName = in.nextLine();				//citire de la tastatura nume fisier intrare
@@ -62,9 +59,9 @@ public abstract class DataReader implements Interface{
 		System.out.println("Insert rotated image name: ");
 		String pictureOutName = in.nextLine();				//citire de la tastatura nume fisier iesire
 		
-		in.close();											//inchidere scanner
+		in.close();											
 		
-		setPath(pathName);									//setare path
+		setPath(pathName);							//setare path
 		setInputName(pictureInName);						//setare fisier de intrare
 		setOutputName(pictureOutName);						//setaer fisier de iesire
 	}
